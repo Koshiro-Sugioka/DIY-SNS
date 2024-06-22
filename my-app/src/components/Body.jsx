@@ -1,0 +1,12 @@
+import React from 'react';
+
+
+const Body = () => {
+    return (
+        <div className="body bg-gray-100 text-lg text-gray-100 h-screen w-full flex items-center  bg-opacity-80">
+            <div className='text-3xl mx-10'><h1>What will you DIY?</h1></div>
+        </div>
+    );
+}
+
+export default Body;
