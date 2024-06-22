@@ -6,7 +6,6 @@ const Homepage = () => {
     <div>
       <Navbar />
       <Banner />  
-      <Test />
       <Posts />    
       <Footer />
     </div>

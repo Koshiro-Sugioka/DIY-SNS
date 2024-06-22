@@ -10,6 +10,8 @@ import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Loginpage from './pages/Loginpage';
 import Signuppage from './pages/Signuppage';
+import Profilepage from './pages/Profilepage';
+import NewPostpage from './pages/NewPostpage';
 import { Navbar, Banner, Body, Footer, Signup } from "./components"
 import { AuthProvider } from './context/AuthContext';
 
@@ -23,6 +25,8 @@ function App() {
         <Route path='/' element={<Homepage />}></Route>
         <Route path='/login' element={<Loginpage />}></Route>
         <Route path='/create' element={<Signuppage />}></Route>
+        <Route path='/profile' element={<Profilepage />}></Route>
+        <Route path='/newpost' element={<NewPostpage />}></Route>
       </Routes>
       </AuthProvider>
   )

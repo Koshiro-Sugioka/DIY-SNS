@@ -5,8 +5,6 @@ import { AuthContext } from '../context/AuthContext';
 
 const Navbar = () => {
     const { authState, logout } = useContext(AuthContext);
-    console.log(authState);
-
     
 
     return (
@@ -18,6 +16,7 @@ const Navbar = () => {
             <div className='md:ml-auto'>
             <div className="flex space-x-5">
                 <a href="/">Home</a>
+                <a href="/newpost">New Post</a>
                 {authState.isAuthenticated ? (
                 <>
                 <Link to="/profile">Profile</Link>
