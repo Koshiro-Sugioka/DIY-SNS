@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 const Postpage = () => {
     const { id } = useParams();
   return (
-    <div>
+    <div className='flex flex-col min-h-screen'>
       <Navbar />  
       <Post id={id}/>    
       <Footer />

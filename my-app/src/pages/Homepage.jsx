@@ -3,7 +3,7 @@ import { Navbar, Banner, Body, Footer, Posts, Test } from "../components"
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
       <Banner />  
       <Posts />    

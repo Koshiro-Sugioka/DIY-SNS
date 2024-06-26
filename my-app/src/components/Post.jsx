@@ -47,7 +47,7 @@ const Post = ({id}) => {
     }
   
     return (
-      <div className='pt-28 pl-8 pt-8 h-screen'>
+      <div className='pt-28 pl-8 pt-8 flex-grow'>
         {data && (
         <>
         <div className='h-5/6'>

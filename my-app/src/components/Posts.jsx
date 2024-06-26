@@ -63,7 +63,7 @@ const Posts = () => {
                         <img className='h-56 w-full object-cover' src="https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?cs=srgb&dl=pexels-pixabay-209235.jpg&fm=jpg" />
                         <div className='p-8'>
                             <h3 className='font-bold text-2xl my-1'>{blog.title}</h3>
-                            <p className='text-gray-600 text-xl'>{blog.body}</p>
+                            {/* <p className='text-gray-600 text-xl'>{blog.body}</p> */}
                             <p className='text-gray-600 text-xl'>by {blog.author}</p>
                         </div>
                     </div>
