@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Banner, Body, Footer, Posts, Test, Profile, NewPost } from "../components"
+import { Navbar, NewPost } from "../components"
 
 const NewPostpage = () => {
   return (
