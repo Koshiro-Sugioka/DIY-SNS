@@ -8,6 +8,7 @@ import Test from "./Test"
 import Signup from "./Signup"
 import Profile from "./Profile"
 import NewPost from "./Newpost"
+import Post from "./Post"
 
 export{
     Banner,
@@ -19,5 +20,6 @@ export{
     Test,
     Signup,
     Profile,
-    NewPost
+    NewPost,
+    Post
 }

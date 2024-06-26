@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Post from './Post';
 import axios from 'axios';
 
 const Posts = () => {
@@ -45,20 +46,19 @@ const Posts = () => {
     }
   
     if (error) {
-      return <div>{error}</div>;
+      return <div className='text-2xl pl-8 pt-8 h-screen'>{error}</div>;
     }
 
 
   return (
     <div>
-        <div className='text-2xl pl-8 pt-8'>Posts</div>
+        <div className='text-2xl pl-8 pt-8 h-full'>Posts</div>
         <div className='w-full bg-[#ffffff] py-[50px]'>
         <div className='max-w-[1240px] mx-auto'>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 ss:grid-cols-1 gap-8 px-4 text-black'>
 
                 {data.map((blog)=>
-
-                // <Link key={blog.id} to={`/blog/${blog.id}`}>
+                <Link key={blog._id} to={`/posts/${blog._id}`}>
                     <div  className='bg-white rounded-xl overflow-hidden drop-shadow-md'>
                         <img className='h-56 w-full object-cover' src="https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?cs=srgb&dl=pexels-pixabay-209235.jpg&fm=jpg" />
                         <div className='p-8'>
@@ -67,7 +67,7 @@ const Posts = () => {
                             <p className='text-gray-600 text-xl'>by {blog.author}</p>
                         </div>
                     </div>
-                // </Link>          
+                </Link>          
                 )}
             </div>
 

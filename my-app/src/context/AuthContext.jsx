@@ -73,6 +73,7 @@ const AuthProvider = ({ children }) => {
 
   const logout = () => {
     localStorage.removeItem('token');
+    window.location.reload();
     setAuthState({
       token: null,
       isAuthenticated: false,

@@ -1,9 +1,11 @@
 // src/components/Register.js
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 const Newpost = () => {
+const { authState } = useContext(AuthContext);
   const [formData, setFormData] = useState({
     title: '',
     body: ''
@@ -42,17 +44,19 @@ const Newpost = () => {
   };
 
 return (
+    <div>
+         {authState.isAuthenticated ? (
     <form onSubmit={onSubmit}>
     <div class="flex justify-center items-center h-screen bg-yellow-500">
         <div class="w-96 p-6 shadow-lg bg-white rounded-md">
             <h1 class="text-3xl block text-center font-semibold"><i class="fa-solid fa-user"></i>New Post</h1>
             <div class="mt-3">
                 <label for="title" class="block text-base mb-2">Title</label>
-                <input value={email} type="title" name="title" id="title" onChange={onChange} class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Email..." />
+                <input value={email} type="title" name="title" id="title" onChange={onChange} class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="" />
             </div>
             <div class="mt-3">
                 <label for="body" class="block text-base mb-2">Body</label>
-                <input value={password} type="body" name="body" id="body" onChange={onChange} class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Password..." />
+                <input value={password} type="body" name="body" id="body" onChange={onChange} class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="" />
             </div>
             <div class="mt-5">
                 
@@ -64,6 +68,14 @@ return (
         </div>
     </div>
     </form>
+    ) : (
+        <div>
+            <h1>Not Logged In</h1>
+        </div>
+    )
+    }
+    </div>
+   
   )
   
 };
